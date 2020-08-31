@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article detail{% endblock %}
+
+{% block body %}
+<div class="jumbotron">
+  <h1 class="display-4">{{article.title}}</h1>
+  <p class="lead">{{article.description}}</p>
+  <hr class="my-4">
+  <img src="{{ asset('images/' ~ article.image) }}" alt="{{article.title}}" class="w-50 shadow rounded"><br>
+  <a href="{{path('article')}}" class="btn btn-outline-primary shadow badge-pill m-2">Retour à la liste d'articles</a>
+</div>
+{% endblock %}

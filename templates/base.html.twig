@@ -3,10 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('stylesheets/bootstrap.css') }}">
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        {% endblock %}
     </head>
     <body>
+    {% include 'parts/header.html.twig' %}
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+     {% include 'parts/footer.html.twig' %}   
     </body>
 </html>
